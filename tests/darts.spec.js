@@ -22,6 +22,9 @@ describe('darts()', () => {
     expect(darts([12, 4, 1, 6], [14, 3, 12, 7])).to.equal(25);
     expect(darts([12, 0, 3, 6], [1, 3, 2, 4, 2])).to.equal(15);
   });
+  it('should only take scores from 1 to 20', () => {
+    expect(darts([12, 0, 3, 26])).to.equal(false);
+  });
   it('should add 10 points if hit radius is less than 5', () => {
     expect(darts([1, 4, 12])).to.equal(20);
   });
@@ -35,6 +38,9 @@ describe('darts()', () => {
   it('should add 100 bonus points if all hits have a radius less than 5', () => {
     expect(darts([1, 3, 5, 0])).to.equal(25);
     expect(darts([1, 1, 4, 2, 3, 2])).to.equal(160);
+  });
+  it('should return a score of -1 if the list of scores is empty', () => {
+    expect(darts([])).to.equal(-1);
   });
   it('should return the throwers total score', () => {
     expect(darts([1, 12, 8])).to.equal(15);
