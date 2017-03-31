@@ -18,7 +18,7 @@ Write a function that accepts a collection of number values and returns a total 
 
 Examples:
 
-scoreThrows( [1, 5, 11] ) => returns 15 
+scoreThrows( [1, 5, 11] ) => returns 15
 scoreThrows( [15, 20, 30] ) => returns 0
 scoreThrows( [1, 2, 1, 4, 4, 2] ) => returns 160
 Additional Requirements
